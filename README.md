@@ -7,37 +7,37 @@ This system includes a complete SQL database (DDL, DML, Functions, Procedures, T
 
 **🚀 Features**
 
-Secure login system with role-based access
-Add and manage criminal cases
-Assign investigators, update cases, track victims & suspects
-Forensic and court report management
-Evidence tracking linked to cases
-Automatic case status update (via trigger)
-SQL procedures & functions for reusable operations
-Join, nested, and aggregate queries
-Clean and responsive UI built using Flask templates
+Secure login system with role-based access <br>
+Add and manage criminal cases <br>
+Assign investigators, update cases, track victims & suspects <br>
+Forensic and court report management <br>
+Evidence tracking linked to cases <br>
+Automatic case status update (via trigger) <br>
+SQL procedures & functions for reusable operations <br>
+Join, nested, and aggregate queries <br>
+Clean and responsive UI built using Flask templates <br>
 
 Automatically changes case status when a forensic report is marked Completed
 
-⚙️ Installation & Setup
-1️⃣ Install Dependencies
-pip install -r requirements.txt
+⚙️ Installation & Setup <br>
+1️⃣ Install Dependencies <br> 
+pip install -r requirements.txt <br>
 
-2️⃣ Set Up MySQL Database
-CREATE DATABASE miniproject_db;
-USE miniproject_db;
+2️⃣ Set Up MySQL Database <br>
+CREATE DATABASE miniproject_db; <br>
+USE miniproject_db; <br>
 
 
 Run database.sql to create all tables, data, functions, procedures, and triggers.
 
-3️⃣ Run Flask App
+3️⃣ Run Flask App <br>
 python app.py
 
 
-Open in browser:
+Open in browser: <br>
 👉 http://localhost:5000
 
-👥 Contributors
-Hithaishhitgowda
+👥 Contributors <br>
+Harshithapakati & Hithaishhitgowda
 
 Developed as part of an academic mini-project on crime case automation.
