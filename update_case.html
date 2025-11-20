@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update Case #{{ case_id }}</h2>
+<form method="POST">
+  <label>Status</label>
+  <select name="status" required>
+    {% for option in ['Open', 'Closed', 'Pending', 'Under Investigation'] %}
+      <option value="{{ option }}" {% if case[0] == option %}selected{% endif %}>{{ option }}</option>
+    {% endfor %}
+  </select>
+
+  <label>Priority Level</label>
+  <select name="priority" required>
+    {% for option in ['Low', 'Medium', 'High', 'Critical'] %}
+      <option value="{{ option }}" {% if case[1] == option %}selected{% endif %}>{{ option }}</option>
+    {% endfor %}
+  </select>
+
+  <h3>Suspects</h3>
+  <select name="suspects" multiple size="5">
+    {% for s in all_suspects %}
+      <option value="{{ s[0] }}" {% for linked in linked_suspects %}{% if s[0] == linked[0] %}selected{% endif %}{% endfor %}>
+        {{ s[1] }} {% if s[2] %}{{ s[2] }}{% endif %} {{ s[3] }}
+      </option>
+    {% endfor %}
+  </select>
+
+  <h3>Add Forensic Report</h3>
+  <input type="date" name="forensic_report_date">
+  <textarea name="forensic_report" placeholder="Findings"></textarea>
+
+  <h3>Add Court Report</h3>
+  <input type="date" name="court_report_date">
+  <textarea name="court_report" placeholder="Report Text"></textarea>
+
+  <button type="submit">Update Case</button>
+</form>
+
+<a href="{{ url_for('select_case_for_update') }}">Back to Case Selection</a>
+{% endblock %}

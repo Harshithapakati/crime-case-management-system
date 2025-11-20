@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Select a Case to Update</h2>
+<ul>
+  {% for case in cases %}
+    <li><a href="{{ url_for('update_case', case_id=case[0]) }}">{{ case[0] }} - {{ case[1] }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}
